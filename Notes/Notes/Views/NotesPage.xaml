@@ -11,12 +11,12 @@
 
     <!-- Display notes in a list -->
     <CollectionView x:Name="collectionView"
-                    Margin="20"
+                    Margin="12"
                     SelectionMode="Single"
                     SelectionChanged="OnSelectionChanged">
         <CollectionView.ItemsLayout>
             <LinearItemsLayout Orientation="Vertical"
-                               ItemSpacing="10" />
+                               ItemSpacing="5" />
         </CollectionView.ItemsLayout>
         <!-- Define the appearance of each item in the list -->
         <CollectionView.ItemTemplate>

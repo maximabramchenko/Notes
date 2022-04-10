@@ -8,7 +8,7 @@
         <Image Source="xamarin_logo.png"
                BackgroundColor="{OnPlatform iOS=LightSlateGray, Android=#fafcfc}"
                VerticalOptions="Center"
-               HeightRequest="64" />
+               HeightRequest="45" />
         <!-- Layout children vertically -->
         <StackLayout Grid.Row="1"
                      Margin="20"
@@ -19,23 +19,29 @@
                         <FormattedString.Spans>
                             <Span Text="ZeoNotes"
                                   FontAttributes="Bold"
-                                  FontSize="1" />
-                            <Span Text=" v1.4" />
+                                  FontSize="15" />
+                            <Span Text=" v1.4" FontSize="15" />
                         </FormattedString.Spans>
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
 
-            <Label Text="engineering 	&amp; IT solution" HorizontalTextAlignment="Center" TextColor="White" FontSize="18" />
-            <Label Text="engineering 	&amp; IT solution" />
-
-            <Label Text= "Assessment of IT efficiency, software inventory and asset management"/>
-            <Label Text= "Management of IT assets and processes"/>
-            <Label Text= "Management of IT assets and processes"/>
-            <Label Text="Xamarin Forms in Arial" FontFamily="Arial" />
-            <Label Text="Xamarin Forms" FontSize="26" />
 
 
+            <Label Text="Assessment of IT efficiency, 
+                         software inventory and asset management
+ "         HorizontalTextAlignment="left" TextColor="White" FontSize="12" />
+
+          
+
+
+
+
+
+
+
+
+           
 
             <Button Text="GLPI"
                     Clicked="OnButtonClicked2" />
@@ -43,7 +49,63 @@
             <Button Text="zeon"
                     Clicked="OnButtonClicked" />
 
-           
+            <Label FontAttributes="Bold" Text="How to Open a  dialer in " VerticalOptions="Center" HorizontalOptions="Center"/>
+            <Entry x:Name="txtNum" Placeholder="Phone Number"></Entry>
+            <Button x:Name="PlacePhoneCal" Text="Call Now" Clicked="CallButton"/>
+
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        
+                        <Span Text="www.zeon.ua"
+                  TextColor="Blue"
+                  FontSize="15"
+                  
+                  TextDecorations="Underline">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding TapCommand}"
+                                          CommandParameter="https://www.zeon.ua/?lang=en" />
+                            </Span.GestureRecognizers>
+                        </Span>
+                       
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+
+                        <Span Text="0951315805"
+                  TextColor="Blue"
+                  FontSize="15"
+                  
+                  TextDecorations="Underline">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding TapCommand2}"
+                                          CommandParameter="0951315805" />
+                            </Span.GestureRecognizers>
+                        </Span>
+
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label
+    Text="My Text to click"
+    HorizontalOptions="Center" >
+
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer
+            Tapped="CallButton2"
+            NumberOfTapsRequired="1" />
+                </Label.GestureRecognizers>
+            </Label>
+
+
+
+
+
+
         </StackLayout>
     </Grid>
 </ContentPage>
